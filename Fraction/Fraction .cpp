@@ -12,12 +12,12 @@ public:
 	Fraction(int numerator, int denominator)
 	{
 		numerator_ = numerator;
-		denominator_ = denominator;	
-		
+		denominator_ = denominator;			
 	}
+
 	bool operator == (Fraction other) {
-		int result = this->numerator_* this->numerator_+this->denominator_*this->denominator_;
-		int result1 = other.numerator_ * other.numerator_ + other.denominator_ * other.denominator_;
+		int result = this->numerator_ * other.denominator_;// +this->denominator_ * this->denominator_;
+		int result1 = this->denominator_ * other.numerator_;// + other.denominator_ * other.denominator_;
 		if (result == result1) {
 			return true;
 		}
@@ -25,9 +25,10 @@ public:
 			return false;
 		}
 	}
+
 	bool operator != (Fraction other) {
-		int result = this->numerator_ * this->numerator_ + this->denominator_ * this->denominator_;
-		int result1 = other.numerator_ * other.numerator_ + other.denominator_ * other.denominator_;
+		int result = this->numerator_ * other.denominator_;// +this->denominator_ * this->denominator_;
+		int result1 = this->denominator_ * other.numerator_;// + other.denominator_ * other.denominator_;
 		if (result != result1) {
 			return true;
 		}
@@ -35,9 +36,10 @@ public:
 			return false;
 		}
 	}
+
 	bool operator < (Fraction other) {
-		int result = this->numerator_ * this->numerator_ + this->denominator_ * this->denominator_;
-		int result1 = other.numerator_ * other.numerator_ + other.denominator_ * other.denominator_;
+		int result = this->numerator_ * other.denominator_;// +this->denominator_ * this->denominator_;
+		int result1 = this->denominator_ * other.numerator_;// + other.denominator_ * other.denominator_;
 		if (result < result1) {
 			return true;
 		}
@@ -45,9 +47,10 @@ public:
 			return false;
 		}
 	}
+
 	bool operator > (Fraction other) {
-		int result = this->numerator_ * this->numerator_ + this->denominator_ * this->denominator_;
-		int result1 = other.numerator_ * other.numerator_ + other.denominator_ * other.denominator_;
+		int result = this->numerator_ * other.denominator_;// +this->denominator_ * this->denominator_;
+		int result1 = this->denominator_ * other.numerator_;// + other.denominator_ * other.denominator_;
 		if (result > result1) {
 			return true;
 		}
@@ -55,9 +58,10 @@ public:
 			return false;
 		}
 	}
+
 	bool operator <= (Fraction other) {
-		int result = this->numerator_ * this->numerator_ + this->denominator_ * this->denominator_;
-		int result1 = other.numerator_ * other.numerator_ + other.denominator_ * other.denominator_;
+		int result = this->numerator_ * other.denominator_;// +this->denominator_ * this->denominator_;
+		int result1 = this->denominator_ * other.numerator_;// + other.denominator_ * other.denominator_;
 		if (result <= result1) {
 			return true;
 		}
@@ -65,9 +69,10 @@ public:
 			return false;
 		}
 	}
+
 	bool operator >= (Fraction other) {
-		int result = this->numerator_ * this->numerator_ + this->denominator_ * this->denominator_;
-		int result1 = other.numerator_ * other.numerator_ + other.denominator_ * other.denominator_;
+		int result = this->numerator_ * other.denominator_;// +this->denominator_ * this->denominator_;
+		int result1 = this->denominator_ * other.numerator_;// + other.denominator_ * other.denominator_;
 		if (result >= result1) {
 			return true;
 		}
